@@ -1,0 +1,4 @@
+name: custom_boards
+build:
+  settings:
+    board_root: .

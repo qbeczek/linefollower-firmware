@@ -1,0 +1,29 @@
+manifest:
+  version: "0.13"
+
+  defaults:
+    remote: zephyrproject
+
+  remotes:
+    - name: zephyrproject
+      url-base: https://github.com/zephyrproject-rtos
+
+  projects:
+    - name: zephyr
+      revision: main
+      path: zephyr
+      west-commands: scripts/west-commands.yml
+
+    # Wymagane moduły Zephyra
+    - name: hal_stm32
+      path: modules/hal/stm32
+      revision: main
+      remote: zephyrproject
+    - name: cmsis
+      path: modules/hal/cmsis
+      revision: main
+      remote: zephyrproject
+
+  self:
+    path: .
+
